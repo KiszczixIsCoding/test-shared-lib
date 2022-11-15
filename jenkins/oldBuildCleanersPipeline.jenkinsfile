@@ -1,0 +1,13 @@
+node {
+       options {
+          buildDiscarder logRotator(artifactDaysToKeepStr: '7', artifactNumToKeepStr: '5', daysToKeepStr: '5', numToKeepStr: '5')
+       }
+
+       stage('Results') {
+          echo "Jenkins home ${env.BUILD_DISPLAY_NAME}"
+          println("History")
+          currentBuild.result = 'FAILURE'
+       }
+       echo 'This will run only if failed'
+    }
+}
