@@ -8,6 +8,4 @@ node {
           println("History")
           currentBuild.result = 'FAILURE'
        }
-       echo 'This will run only if failed'
-    }
 }
